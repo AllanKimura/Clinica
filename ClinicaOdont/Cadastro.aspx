@@ -266,7 +266,7 @@
         </div>
         <div class="final">
             <p align="center"><a class="ja" href="Login.aspx">Já possui cadastro?</a></p>
-            <a href="Default.aspx"><asp:Button ID="Voltar" runat="server" TextAlignment="center"  type="button" class="btn btn-info" Text="Voltar" /></a>
+            <asp:Button ID="Voltar" runat="server" TextAlignment="center"  type="button" href="Default.aspx" class="btn btn-info" Text="Voltar" />
             <asp:Button ID="Entrar" runat="server"  type="button" class="btn btn-info" Text="Cadastrar" />
         </div>
     </form>

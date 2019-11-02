@@ -14,12 +14,12 @@
 
     <style>
         ul{
+            position:absolute;
            list-style-type: none;
            margin: 0;
            padding: 0;
            overflow: hidden;
            background-color: #333;
-           position: fixed;
            top: 0;
            width:100%;
         }
@@ -43,8 +43,27 @@
             background-color: #18484e;
         }
         .banner{
-            width: 100%;
-            height: 300px;
+            background-image: url("imagens/bemlindo.jpg");
+            height: 650px;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+        }
+        .BemVindo{
+            position: absolute;
+            width:50%;
+            bottom: 45%;
+            left: 27%;
+            font-family:Arial, sans-serif;
+            line-height:1em;
+            color:#fff9d6;
+            font-style:italic;
+            font-size:68px;
+            text-shadow:0px 0px 0 rgb(212,212,212),1px 1px 0
+            rgb(179,179,179),2px 2px 0 rgb(146,146,146), 3px 3px 0
+            rgb(113,113,113),4px 4px 3px rgba(0,0,0,0.6),4px 4px 1px
+            rgba(0,0,0,0.5),0px 0px 3px rgba(0,0,0,.2);
 
         }
         .auto-style1 {
@@ -60,7 +79,7 @@
 </head>
 <body>
     <form id="form1" runat="server">
-    <div>
+    <div class="menu">
     <ul>
         <li><a class="" href="#home">Home</a></li>
         <li><a href="#info">Informação</a></li>
@@ -72,9 +91,8 @@
     </ul>
     </div>
     </form>
-    <p>&nbsp;</p>
-    <p><img alt="b" class="banner" longdesc="b" src="imagens/bemlindo.jpg" /></p>
-    <h1>Seja Bem-(V)Lindo!! ^u^ <br/>Com seu sorriso (hihihi)....</h1>
+    <div class="banner"></div>
+    <h1 class="BemVindo">Seja Bem-(V)Lindo!!!</h1>
     <h2>Informações:</h2>
      <img class="imglado" src="imagens/apresent.png" />
     <div>
