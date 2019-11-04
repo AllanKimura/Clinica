@@ -44,7 +44,7 @@
         }
         .banner{
             background-image: url("imagens/bemlindo.jpg");
-            height: 650px;
+            height: 700px;
             background-attachment: fixed;
             background-repeat: no-repeat;
             background-position: center;

@@ -25,7 +25,7 @@
             margin: 0;
         }
         .fundo{
-            background-image: url(../imgs/FundoClinica.jpg);
+            background-image: url(../imagens/FundoClinica.jpg);
             background-repeat: no-repeat;
             background-size: cover;
             background-position: center;
@@ -266,7 +266,7 @@
         </div>
         <div class="final">
             <p align="center"><a class="ja" href="Login.aspx">Já possui cadastro?</a></p>
-            <asp:Button ID="Voltar" runat="server" TextAlignment="center"  type="button" href="Default.aspx" class="btn btn-info" Text="Voltar" />
+            <asp:Button ID="Voltar" runat="server" TextAlignment="center" PostBackUrl="~/default.aspx"  type="button" class="btn btn-info" Text="Voltar" />
             <asp:Button ID="Entrar" runat="server"  type="button" class="btn btn-info" Text="Cadastrar" />
         </div>
     </form>
