@@ -4,11 +4,9 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Heebo:700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css?family=Heebo:700&display=swap" rel="stylesheet"/>
     <title>Cadastro</title>
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <style type="text/css">
         /*Eu não lembro pra que isso aqui serve mas não apague por favor*/
         .auto-style1 {
@@ -24,9 +22,11 @@
             height: 100%;
             margin: 0;
         }
-        .fundo{
-            background-image: url(../imagens/FundoClinica.jpg);
-            background-repeat: no-repeat;
+        .fundo {
+            background-image: url(./imagens/FundoClinica.jpg );
+            
+                
+                background-repeat: no-repeat;
             background-size: cover;
             background-position: center;
             height: 100%;
@@ -42,7 +42,7 @@
            top: 50%;
            left: 50%;
            width: 60%;
-           height: 550px;
+           height: 700px;
        }
         /*Todos os info são gambiarra pra posicionar os inputs corretamente, não mexa por favor*/
        .Info{
@@ -53,19 +53,19 @@
            margin-left: 40%;
            width: 50%;
            position: relative;
-           bottom: 40px;
+           bottom: 43px;
        }
        .Info3{
            margin-left: 30%;
            width: 50%;
            position: relative;
-           bottom: 40px;
+           bottom: 43px;
        }
        .Info4{
            margin-left: 62%;
            width: 45%;
            position: relative;
-           bottom: 80px;
+           bottom: 86px;
        }
        /*Input tipo 1*/
        .I1{
@@ -146,12 +146,8 @@
             margin-left: 2%;
             width: 85%;
         }
-              /*Remove o botão*/
-        input[type="date"]::-webkit-clear-button {
-            display: none;
-        }
 
-        /* Remove o outro botão kkk */
+        /* Remove o outro botão */
         input[type="date"]::-webkit-inner-spin-button { 
             display: none;
         }
@@ -192,12 +188,14 @@
        }
         /*Efeito do botão voltar*/
        #Voltar:hover, #Voltar:focus, #Voltar:active{
+           outline: none;
+           cursor: pointer;
            color: #ffffff !important;
            background-color: #8f4426 !important;
            border-color: #8f4426 !important;
            transition: all 0.4s ease 0s;
        }
-       #Entrar{
+       #Cadastrar{
            display: inline-block;
            border-radius: 0;
            color: #fff !important;
@@ -216,7 +214,9 @@
            font-family: 'Heebo', sans-serif;
        }
        /*Efeito do botão de cadastro*/
-       #Entrar:hover, #Entrar:focus, #Entrar:active{
+       #Cadastrar:hover, #Cadastrar:focus, #Cadastrar:active{
+           outline: none;
+           cursor: pointer;
            color: darkslategray !important;
            background-color: #61f2f5 !important;
            border-color: #61f2f5 !important;
@@ -228,14 +228,14 @@
        }
     
     </style>
-   <link href="https://fonts.googleapis.com/css?family=Mansalva|Montserrat&display=swap" rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css?family=Mansalva|Montserrat&display=swap" rel="stylesheet"/>
 </head>
 <body>
     <div class="fundo"></div>
     <form id="form1" runat="server">
         <h2 align="center">Cadastro</h2>
         <div class ="Info">
-            <asp:TextBox ID="TextBox1" runat="server" CssClass="I1" placeholder="Nome"></asp:TextBox>
+            <asp:TextBox ID="Nome" runat="server" CssClass="I1" placeholder="Nome"></asp:TextBox>
             <span class="focus-border"></span>
         </div>
         <div class ="Info2">
@@ -256,7 +256,7 @@
                 <span class="focus-border"></span>
             </div>
             <div class ="Info3">
-                <input ID="DataNasc" class="I2" type="date" />
+                <asp:TextBox id="DataNasc" runat="server" type="text" class="I2" placeholder="Data de Nascimento"></asp:TextBox>
                 <span class="focus-border"></span>
             </div>
             <div class ="Info4">
@@ -264,10 +264,25 @@
                 <span class="focus-border"></span>
             </div>
         </div>
+        <div class="tres">
+            <div class ="Info">
+                <asp:TextBox ID="Endereco" runat="server" CssClass="I2" placeholder="Endereço"></asp:TextBox>
+                <span class="focus-border"></span>
+            </div>
+            <div class ="Info3">
+                <asp:TextBox ID="Tel" runat="server" CssClass="I2" placeholder="Telefone"></asp:TextBox>
+                <span class="focus-border"></span>
+            </div>
+            <div class ="Info4">
+                <asp:TextBox ID="Cel" runat="server" CssClass="I2" placeholder="Celular"></asp:TextBox>
+                <span class="focus-border"></span>
+            </div>
+        </div>
         <div class="final">
-            <p align="center"><a class="ja" href="Login.aspx">Já possui cadastro?</a></p>
-            <asp:Button ID="Voltar" runat="server" TextAlignment="center" PostBackUrl="~/default.aspx"  type="button" class="btn btn-info" Text="Voltar" />
-            <asp:Button ID="Entrar" runat="server"  type="button" class="btn btn-info" Text="Cadastrar" />
+            <p align="center"><a class="ja" href="Login.aspx">Já possui cadastro?<asp:Label ID="lbl_msg" runat="server"></asp:Label>
+                </a></p>
+            <asp:Button ID="Voltar" runat="server" TextAlignment="center" PostBackUrl="Default.aspx"  type="button" class="btn btn-info" Text="Voltar" />
+            <asp:Button ID="Cadastrar" runat="server"  type="button" class="btn btn-info" Text="Cadastrar" OnClick="Cadastrar_Click"/>
         </div>
     </form>
 </body>

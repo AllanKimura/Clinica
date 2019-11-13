@@ -4,24 +4,24 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Heebo:700&display=swap" rel="stylesheet">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Heebo:700&display=swap" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Login</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <style type="text/css">
-        h2{
+        h2 {
             font-family: 'Roboto', sans-serif;
             margin-top: 20px;
-          }
-        body,html{
+        }
+
+        body,html {
             color: white;
             height: 100%;
             margin: 0;
         }
-        .fundo{
-            background-image: url(../imagens/FundoClinica.jpg);
+
+        .fundo {
+            background-image: url(./imagens/FundoClinica.jpg);
             background-repeat: no-repeat;
             background-size: cover;
             background-position: center;
@@ -29,7 +29,8 @@
             /*filter: blur(2px);
             -webkit-filter: blur(2px);*/
         }
-       form{
+
+       form { 
            background: rgba(0,0,0,0.6);
            transform: translate(-50%,-50%);
            position: absolute;
@@ -39,11 +40,17 @@
            width: 40%;
            height: 400px;
        }
-       .login{
+
+        form h2 {
+            letter-spacing: 2px;
+        }
+
+       .login {
            width: 50%;
            position: relative;
        }
-       #Email{
+
+       #Email {
            margin-left: 50%;
            height: 40px;
            border: none;
@@ -158,7 +165,7 @@
        }
        .nao{
            display: inline-block;
-           margin-top: 40px;
+           margin-top: 20px;
            text-decoration: none;
            color: lightgreen;
            font-family: 'Roboto', sans-serif;
@@ -171,12 +178,12 @@
        }
 
     </style>
-   <link href="https://fonts.googleapis.com/css?family=Mansalva|Montserrat&display=swap" rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css?family=Mansalva|Montserrat&display=swap" rel="stylesheet" />
 </head>
 <body>
     <div class="fundo"></div>
     <form id="form1" runat="server" method="post">
-        <h2 align="center">LOGIN:</h2>
+        <h2 align="center">LOGIN</h2>
             <p>&nbsp;</p>
         <div class ="login">
             <asp:TextBox ID="Email" placeholder="Email" runat="server"></asp:TextBox>
@@ -188,7 +195,7 @@
             <span class="focus-border"></span>
         </div>
         <br />
-        <asp:Button ID="Voltar" runat="server" TextAlignment="center" PostBackUrl="~/default.aspx" type="button" class="btn btn-info" Text="Voltar" />
+        <asp:Button ID="Voltar" runat="server" TextAlignment="center" PostBackUrl="Default.aspx" type="button" class="btn btn-info" Text="Voltar" />
         <asp:Button ID="Entrar" runat="server"  type="button" class="btn btn-info" Text="Entrar" /> <br />
         <p align="center"><a class="nao" href="Cadastro.aspx">Não possui cadastro?</a></p>
     </form></body>
