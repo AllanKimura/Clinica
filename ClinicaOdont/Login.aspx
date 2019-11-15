@@ -132,6 +132,7 @@
            color: #fff;
            font-size: 16px;
            font-family: 'Heebo', sans-serif;
+           cursor: pointer;
        }
        #Voltar:hover, #Voltar:focus, #Voltar:active{
            color: #ffffff !important;
@@ -156,6 +157,7 @@
            color: #fff;
            font-size: 16px;
            font-family: 'Heebo', sans-serif;
+           cursor: pointer;
        }
        #Entrar:hover, #Entrar:focus, #Entrar:active{
            color: darkslategray !important;

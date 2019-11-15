@@ -8,7 +8,6 @@
     <link href="https://fonts.googleapis.com/css?family=Heebo:700&display=swap" rel="stylesheet"/>
     <title>Cadastro</title>
     <style type="text/css">
-        /*Eu não lembro pra que isso aqui serve mas não apague por favor*/
         .auto-style1 {
             width: 100%;
         }
@@ -42,7 +41,7 @@
            top: 50%;
            left: 50%;
            width: 60%;
-           height: 700px;
+           height: 95%;
        }
         /*Todos os info são gambiarra pra posicionar os inputs corretamente, não mexa por favor*/
        .Info{
@@ -141,10 +140,16 @@
            transition: 0.4s;
        }
 
-       /*Posicionando a terceira linha q tem tres inputs, pequena gambiarra*/
+
         .tres {
             margin-left: 2%;
             width: 85%;
+        }
+
+        .quatro{
+            margin-left: 2%;
+            width: 85%;
+            margin-top: -30px;
         }
 
         /* Remove o outro botão */
@@ -167,6 +172,9 @@
            transition: 0.5s;
            text-decoration: none;
            color: #fff;
+       }
+       .botao{
+           margin-top: -40px;
        }
         #Voltar{
            display: inline-block;
@@ -264,9 +272,9 @@
                 <span class="focus-border"></span>
             </div>
         </div>
-        <div class="tres">
+        <div class="quatro">
             <div class ="Info">
-                <asp:TextBox ID="Endereco" runat="server" CssClass="I2" placeholder="Endereço"></asp:TextBox>
+                <asp:TextBox ID="Endereco" runat="server" CssClass="I2" placeholder="CEP"></asp:TextBox>
                 <span class="focus-border"></span>
             </div>
             <div class ="Info3">
@@ -279,11 +287,14 @@
             </div>
         </div>
         <div class="final">
-            <p align="center"><a class="ja" href="Login.aspx">Já possui cadastro?<asp:Label ID="lbl_msg" runat="server"></asp:Label>
+            <div class="botao">
+                 <p align="center"><a class="ja" href="Login.aspx">Já possui cadastro?<asp:Label ID="lbl_msg" runat="server"></asp:Label>
                 </a></p>
-            <asp:Button ID="Voltar" runat="server" TextAlignment="center" PostBackUrl="Default.aspx"  type="button" class="btn btn-info" Text="Voltar" />
-            <asp:Button ID="Cadastrar" runat="server"  type="button" class="btn btn-info" Text="Cadastrar" OnClick="Cadastrar_Click"/>
+                <asp:Button ID="Voltar" runat="server" TextAlignment="center" PostBackUrl="Default.aspx"  type="button" class="btn btn-info" Text="Voltar" />
+                <asp:Button ID="Cadastrar" runat="server"  type="button" class="btn btn-info" Text="Cadastrar" OnClick="Cadastrar_Click"/>
+            </div>
         </div>
+        <asp:Literal ID="litResultado" runat="server" />
     </form>
 </body>
 </html>
